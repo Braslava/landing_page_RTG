@@ -73,7 +73,7 @@ body {
 	background-position: center center;
 	background-attachment: fixed;
 	color: var(--secondary-text);
-	padding: 15vh 0 8vh 0;
+	padding: 15vh 10px 8vh 10px;
 	text-align: center;
 }
 
