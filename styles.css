@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+	--primary-text: #0d0d0d;
+	--secondary-text: #ffffff;
+    --middle-text: #585859;
+	--bright-accent: #d99414;
+	--darker-accent: #a6681c;
+    --background: #A69492;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	flex-direction: column;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.intro {
+	background-image: url(assets/maine-coon-minimized.jpg);
+	background-size: cover;
+	opacity: 0.9;
+	background-position: center center;
+	background-attachment: fixed;
+	color: var(--secondary-text);
+	padding: 15vh 0 8vh 0;
+	text-align: center;
+}
+
+.heading--main {
+	font-size: 45px;
+}
+
+.button-wrapper {
+	margin: 25px 0 15px;
+}
+
+.button {
+	background-color: var(--bright-accent);
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--secondary-text);
+	border-radius: 8px;
+	padding: 15px 30px;
+}
+
+.button:hover {
+	background-color: var(--darker-accent);
+	transition: all 0.5s;
+	cursor: pointer;
+}
+
+.video-container {
+	display: grid;
+	place-items: center;
+	padding: 0 10px;
+}
+
+.video {
+	width: 100%;
+	max-width: 600px;
+}
+
+.caption {
+	margin: 10px 0;
+    color: var(--middle-text);
+}
+
+.video-frame {
+	width: 100%;
+	height: 280px;
+}
+
+.footer {
+	position: sticky;
+	bottom: 0;
+	text-align: center;
+	background-color: var(--background);
+	color: var(--secondary-text);
+	padding: 12px 0 15px 0;
+    font-size: 1em;
+    opacity: 0.9;
+}
