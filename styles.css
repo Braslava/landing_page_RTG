@@ -32,7 +32,18 @@ body {
 
 .button-wrapper {
 	margin: 25px 0 15px;
+	display: flex;
+	justify-content: center;
 }
+
+
+@media only screen and (max-width: 600px) {
+	.button-sm-block {
+	  display: flex;
+	  margin: 15px 0 10px 0; 
+	  justify-content: center;
+	}
+  }
 
 .button {
 	background-color: var(--bright-accent);
