@@ -147,6 +147,17 @@ body {
 
 /*Blockquote section styles*/
 
+.quote-container {
+	max-width: 500px;
+	padding: 20px 15px;
+	align-self: center;
+}
+
+.quote {
+	font-size: 28px;
+	color: var(--darker-accent);
+}
+
 /*Footer styles*/
 
 .footer {
