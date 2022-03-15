@@ -36,14 +36,13 @@ body {
 	justify-content: center;
 }
 
-
 @media only screen and (max-width: 600px) {
 	.button-sm-block {
-	  display: flex;
-	  margin: 15px 0 10px 0; 
-	  justify-content: center;
+		display: flex;
+		margin: 15px 0 10px 0;
+		justify-content: center;
 	}
-  }
+}
 
 .button {
 	background-color: var(--bright-accent);
@@ -55,9 +54,9 @@ body {
 }
 
 .button:hover {
+	cursor: pointer;
 	background-color: var(--darker-accent);
 	transition: all 0.5s;
-	cursor: pointer;
 }
 
 .caption {
@@ -132,9 +131,21 @@ body {
 	height: 280px;
 }
 
+.social-icons-container {
+	padding: 20px 0;
+}
+
+.social-media-icon {
+	width: 40px;
+}
+
+.social-media-icon:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+	transition: 0.5s;
+}
+
 /*Blockquote section styles*/
-
-
 
 /*Footer styles*/
 
