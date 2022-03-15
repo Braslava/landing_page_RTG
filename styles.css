@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap');
 
 :root {
 	--primary-text: #0d0d0d;
@@ -41,6 +41,11 @@ body {
 
 .heading--main {
 	font-size: 45px;
+}
+
+.subheading {
+	font-size: 1.3rem; 
+	font-weight: 500;
 }
 
 .button-wrapper {
