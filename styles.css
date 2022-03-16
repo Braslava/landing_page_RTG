@@ -82,6 +82,8 @@ body {
 .subheading {
 	font-size: 1.3rem;
 	font-weight: 500;
+	text-align: center;
+	color: var(--darker-accent);
 }
 
 .caption {
@@ -93,18 +95,28 @@ body {
 
 .intro {
 	display: grid;
-	background-image: url(assets/maine-coon-minimized.jpg);
-	background-size: cover;
-	background-position: center center;
-	background-attachment: fixed;
 	color: var(--secondary-text);
 	text-align: center;
 	padding: 15vh 10px 8vh 10px;
 	justify-items: center;
+	position: relative;
+}
+
+.intro::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-image: url(assets/maine-coon-minimized.jpg);
+	opacity: 0.9;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	z-index: -1;
 }
 
 .intro__subheading {
 	max-width: 600px;
+	color: var(--secondary-text);
 }
 
 /*FAQ section styles*/
@@ -179,13 +191,47 @@ body {
 	color: var(--darker-accent);
 }
 
+/*Contact info styles*/
+.contact {
+	display: grid;
+	gap: 15px;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	align-self: center;
+	/* border-radius: 8px; */
+	padding: 16px 8px;
+	background-color: rgba(166, 148, 146, 0.6);
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.contact__map-frame {
+	width: 100%;
+	height: 100%;
+	max-width: 400px;
+}
+
+.contact__heading {
+	font-size: 1.3rem;
+	font-weight: 500;
+	color: var(--darker-accent);
+}
+
+@media only screen and (max-width: 500px) {
+	.contact {
+		grid-template-columns: 1fr;
+		justify-items: baseline;
+		text-align: center;
+		justify-items: center;
+	}
+}
 /*Footer styles*/
 
 .footer {
 	position: sticky;
 	bottom: 0;
 	text-align: center;
-	background-color: var(--background);
+	background-color: var(--darker-accent);
 	color: var(--secondary-text);
 	padding: 12px 0 15px 0;
 	font-size: 1em;
