@@ -63,11 +63,6 @@ body {
 	transition: all 0.5s;
 }
 
-.caption {
-	margin: 10px 0;
-	color: var(--middle-text);
-}
-
 .link {
 	color: var(--bright-accent);
 	text-decoration: none;
@@ -77,26 +72,39 @@ body {
 	text-decoration: underline;
 }
 
-/* hero section styles */
-
-.intro {
-	background-image: url(assets/maine-coon-minimized.jpg);
-	background-size: cover;
-	opacity: 0.9;
-	background-position: center center;
-	background-attachment: fixed;
-	color: var(--secondary-text);
-	padding: 15vh 10px 8vh 10px;
-	text-align: center;
-}
+/*Typography*/
 
 .heading--main {
 	font-size: 45px;
+	text-align: center;
 }
 
 .subheading {
 	font-size: 1.3rem;
 	font-weight: 500;
+}
+
+.caption {
+	margin: 10px 0;
+	color: var(--middle-text);
+}
+
+/* hero section styles */
+
+.intro {
+	display: grid;
+	background-image: url(assets/maine-coon-minimized.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	color: var(--secondary-text);
+	text-align: center;
+	padding: 15vh 10px 8vh 10px;
+	justify-items: center;
+}
+
+.intro__subheading {
+	max-width: 600px;
 }
 
 /*FAQ section styles*/
@@ -119,9 +127,9 @@ body {
 	margin-top: 8px;
 }
 
-/* video section styles */
+/* media section styles */
 
-.video-container {
+.media-container {
 	display: grid;
 	place-items: center;
 	padding: 30px 10px 20px 10px;
