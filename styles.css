@@ -141,7 +141,7 @@ body {
 
 /* media section styles */
 
-.contact-container {
+.container--dark-bg {
 	display: grid;
 	place-items: center;
 	padding: 30px 10px 20px 10px;
