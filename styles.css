@@ -141,13 +141,14 @@ body {
 
 /* media section styles */
 
-.media-container {
+.contact-container {
 	display: grid;
 	place-items: center;
 	padding: 30px 10px 20px 10px;
 	background-color: var(--primary-text);
 	opacity: 0.9;
 	color: var(--secondary-text);
+	margin-top: 30px;
 }
 
 .video > .caption {
@@ -197,11 +198,8 @@ body {
 	gap: 15px;
 	grid-template-columns: 1fr 1fr;
 	justify-items: center;
-	align-self: center;
-	/* border-radius: 8px; */
 	padding: 16px 8px;
-	background-color: rgba(166, 148, 146, 0.6);
-	width: 100%;
+	/* background-color: rgba(166, 148, 146, 0.6); */
 	margin-bottom: 30px;
 }
 
@@ -214,7 +212,7 @@ body {
 .contact__heading {
 	font-size: 1.3rem;
 	font-weight: 500;
-	color: var(--darker-accent);
+	color: var(--bright-accent);
 }
 
 @media only screen and (max-width: 500px) {
