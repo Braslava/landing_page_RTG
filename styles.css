@@ -5,8 +5,10 @@
 	--secondary-text: #ffffff;
 	--middle-text: #585859;
 	--bright-accent: #d99414;
+	/* --bright-accent: #c25208; */
 	--darker-accent: #a6681c;
 	--background: #a69492;
+	scroll-behavior: smooth;
 }
 
 *,
@@ -48,12 +50,14 @@ body {
 	background-color: var(--bright-accent);
 	text-transform: uppercase;
 	text-decoration: none;
+	font-weight: 500;
 	color: var(--secondary-text);
 	border-radius: 8px;
 	padding: 12px 30px;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
 	cursor: pointer;
 	background-color: var(--darker-accent);
 	transition: all 0.5s;
@@ -62,6 +66,15 @@ body {
 .caption {
 	margin: 10px 0;
 	color: var(--middle-text);
+}
+
+.link {
+	color: var(--bright-accent);
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
 }
 
 /* hero section styles */
