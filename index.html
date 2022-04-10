@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
+    <script defer src="index.js"></script>
     <title>Restaurant</title>
 </head>
 
@@ -27,39 +28,61 @@
         </div>
     </header>
     <section id="faq" class="faq flex-container">
-        <p class="question">Lorem ipsum dolor sit, amet consectetur adipisicing?</p>
-        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, quibusdam? Nihil cumque
-            labore
-            ad, delectus nulla, nesciunt voluptate a natus asperiores exercitationem soluta fuga, provident omnis
-            aliquid. Sit accusamus maiores quidem magni id culpa voluptas sint. Odit voluptatem corrupti id ex aut nemo
-            officiis officia in.</p>
-        <p class="question">How to find us?</p>
-        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nam deserunt commodi
-            porro
-            explicabo aperiam, minus repudiandae qui dicta id ipsum placeat impedit expedita dolorum possimus eius
-            laborum mollitia? Nemo ut voluptatem quas repellendus magni soluta corporis eos eum eveniet nam id quam,
-            laboriosam consequatur temporibus quaerat recusandae.</p>
-        <p class="question">Lorem ipsum dolor sit, amet consectetur adipisicing?</p>
-        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a dolores ex molestiae,
-            repellat
-            dignissimos, temporibus itaque doloremque repudiandae quasi quod doloribus recusandae eos sint facilis
-            ducimus rerum optio aliquam commodi tempora praesentium. Eius, libero nisi.</p>
-        <p class="question">What dishes are you spaciality?</p>
-        <p class="list-intro">We serve: </p>
-        <ul class="list">
-            <li>Pastas</li>
-            <li>Burgers (including vegan and vegetarian)</li>
-            <li>Salads</li>
-            <li>Rissotos</li>
-            <li>Cakes and desserts</li>
-        </ul>
-        <p class="question">Where can I see the menu?</p>
-        <p class="paragraph">You can find the menu right here &#8594
-            <span class="button-sm-block"><a href="menu.html#menu" class="button button--link ">Menu</a></span>
-        </p>
+
+        <div class="questionContainer" data-index="1">
+            <p class="question"><span class="chevron right"></span>Lorem ipsum dolor sit, amet
+                consectetur adipisicing?</p>
+            <p class="paragraph answer" data-index="1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+                quibusdam? Nihil cumque
+                labore
+                ad, delectus nulla, nesciunt voluptate a natus asperiores exercitationem soluta fuga, provident omnis
+                aliquid. Sit accusamus maiores quidem magni id culpa voluptas sint. Odit voluptatem corrupti id ex aut
+                nemo
+                officiis officia in.
+            </p>
+        </div>
+
+        <div class="questionContainer">
+            <p class="question" data-index="1"><span class="chevron right"></span>How to find us?</p>
+            <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nam deserunt commodi
+                porro
+                explicabo aperiam, minus repudiandae qui dicta id ipsum placeat impedit expedita dolorum possimus eius
+                laborum mollitia? Nemo ut voluptatem quas repellendus magni soluta corporis eos eum eveniet nam id quam,
+                laboriosam consequatur temporibus quaerat recusandae.
+            </p>
+        </div>
+
+        <div class="questionContainer">
+            <p class="question"><span class="chevron right"></span>Lorem ipsum dolor sit, amet consectetur adipisicing?
+            </p>
+            <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a dolores ex molestiae,
+                repellat
+                dignissimos, temporibus itaque doloremque repudiandae quasi quod doloribus recusandae eos sint facilis
+                ducimus rerum optio aliquam commodi tempora praesentium. Eius, libero nisi.</p>
+        </div>
+
+        <div class="questionContainer">
+            <p class="question"><span class="chevron right"></span>What dishes are you spaciality?</p>
+            <p class="paragraph answer">We serve:
+            <ul class="list">
+                <li>Pastas</li>
+                <li>Burgers (including vegan and vegetarian)</li>
+                <li>Salads</li>
+                <li>Rissotos</li>
+                <li>Cakes and desserts</li>
+            </ul>
+            </p>
+        </div>
+
+        <div class="questionContainer">
+            <p class="question"><span class="chevron right"></span>Where can I see the menu?</p>
+            <p class="paragraph">You can find the menu right here &#8594
+                <span class="button-sm-block"><a href="menu.html#menu" class="button button--link ">Menu</a></span>
+            </p>
+        </div>
     </section>
     <section id="contact" class="container--dark-bg">
-       
+
         <div class="contact">
             <div class="contact__details">
                 <h2 class="contact__heading">Contact information: </h2>
@@ -77,6 +100,7 @@
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2169.249956149014!2d24.027139215289655!3d57.064373197542196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eec6a4ee53c901%3A0xae9086350af609e0!2sMangalsala%20breakwater!5e0!3m2!1sen!2slv!4v1647418173553!5m2!1sen!2slv"
                 style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
+
         <div class="social-icons-container">
             <a href="https://github.com/Braslava" target=”_blank” class="social-media-link"><img
                     class="social-media-icon" src="assets/social-media/icons8-github.svg" alt="author's Github"></a>
@@ -87,7 +111,7 @@
                     class="social-media-icon" src="assets/social-media/icons8-instagram-64.svg"
                     alt="cats of Instagram"></a>
         </div>
-       
+
     </section>
     <section class="flex-container">
         <figure class="quote-container">
