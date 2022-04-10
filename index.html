@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
-    <script defer src="index.js"></script>
+    <script defer src="index.js" type="module"></script>
     <title>Restaurant</title>
 </head>
 
@@ -32,7 +32,7 @@
         <div class="questionContainer" data-index="1">
             <p class="question"><span class="chevron right"></span>Lorem ipsum dolor sit, amet
                 consectetur adipisicing?</p>
-            <p class="paragraph answer" data-index="1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+            <p class="paragraph answer hidden" data-index="1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
                 quibusdam? Nihil cumque
                 labore
                 ad, delectus nulla, nesciunt voluptate a natus asperiores exercitationem soluta fuga, provident omnis
@@ -44,7 +44,7 @@
 
         <div class="questionContainer">
             <p class="question" data-index="1"><span class="chevron right"></span>How to find us?</p>
-            <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nam deserunt commodi
+            <p class="paragraph answer hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nam deserunt commodi
                 porro
                 explicabo aperiam, minus repudiandae qui dicta id ipsum placeat impedit expedita dolorum possimus eius
                 laborum mollitia? Nemo ut voluptatem quas repellendus magni soluta corporis eos eum eveniet nam id quam,
@@ -55,7 +55,7 @@
         <div class="questionContainer">
             <p class="question"><span class="chevron right"></span>Lorem ipsum dolor sit, amet consectetur adipisicing?
             </p>
-            <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a dolores ex molestiae,
+            <p class="paragraph answer hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a dolores ex molestiae,
                 repellat
                 dignissimos, temporibus itaque doloremque repudiandae quasi quod doloribus recusandae eos sint facilis
                 ducimus rerum optio aliquam commodi tempora praesentium. Eius, libero nisi.</p>
@@ -63,20 +63,21 @@
 
         <div class="questionContainer">
             <p class="question"><span class="chevron right"></span>What dishes are you spaciality?</p>
-            <p class="paragraph answer">We serve:
-            <ul class="list">
-                <li>Pastas</li>
-                <li>Burgers (including vegan and vegetarian)</li>
-                <li>Salads</li>
-                <li>Rissotos</li>
-                <li>Cakes and desserts</li>
-            </ul>
-            </p>
+            <div class="paragraph answer hidden">
+                <p>We serve:</p>
+                <ul class="list">
+                    <li>Pastas</li>
+                    <li>Burgers (including vegan and vegetarian)</li>
+                    <li>Salads</li>
+                    <li>Rissotos</li>
+                    <li>Cakes and desserts</li>
+                </ul>
+            </div>
         </div>
 
         <div class="questionContainer">
             <p class="question"><span class="chevron right"></span>Where can I see the menu?</p>
-            <p class="paragraph">You can find the menu right here &#8594
+            <p class="paragraph answer hidden">You can find the menu right here &#8594
                 <span class="button-sm-block"><a href="menu.html#menu" class="button button--link ">Menu</a></span>
             </p>
         </div>

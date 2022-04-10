@@ -132,8 +132,9 @@ body {
 	cursor: pointer;
 }
 
-.faq > .paragraph {
+.answer {
 	margin: 10px 0 16px 0;
+	padding-left: 10px;
 }
 
 .list {
