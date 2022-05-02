@@ -1,0 +1,23 @@
+{
+  "name": "landing_page_rtg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass sass/main.scss styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Braslava/landing_page_RTG.git"
+  },
+  "author": "Mara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Braslava/landing_page_RTG/issues"
+  },
+  "homepage": "https://github.com/Braslava/landing_page_RTG#readme",
+  "dependencies": {
+    "sass": "^1.51.0"
+  }
+}

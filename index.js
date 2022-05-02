@@ -36,6 +36,9 @@ const faqData = [
 ];
 console.log(faqData);
 
+
+// ** selecting elements ** 
+
 const faqContainer = document.querySelector(".faq");
 //const questionContainers = document.querySelectorAll("")
 
@@ -61,10 +64,17 @@ const handleOepnAll = () => {
 
 // ** Main functions **
 
+
+// const createFaqItem = (itemData)= {
+    
+// }
+
 const toggleOpenAnswer = (answer, chevron) => {
     chevron.classList.toggle("bottom");
     answer.classList.toggle("hidden");
 };
+
+
 
 // ** Event listeners **
 faqContainer.addEventListener("click", handleQuestionClick);

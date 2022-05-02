@@ -1,0 +1,268 @@
+@use "reset.scss";
+@use "variables.scss" as v;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap");
+
+:root {
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+/*Resuable elements*/
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+
+.button-wrapper {
+    margin: 25px 0 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .button-sm-block {
+        display: flex;
+        margin: 15px 0 10px 0;
+        justify-content: center;
+    }
+}
+
+.button {
+    background-color: v.$bright-accent;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    color: v.$secondary-text;
+    border-radius: 8px;
+    padding: 12px 30px;
+    border: none;
+}
+
+.button:hover,
+.button:focus {
+    cursor: pointer;
+    background-color: v.$darker-accent;
+    transition: all 0.5s;
+}
+
+.link {
+    color: v.$bright-accent;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/*Typography*/
+
+.heading--main {
+    font-size: 45px;
+    text-align: center;
+}
+
+.subheading {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    color: v.$darker-accent;
+}
+
+.caption {
+    margin: 10px 0;
+    color: v.$middle-text;
+}
+
+/* hero section styles */
+
+.intro {
+    display: grid;
+    color: v.$secondary-text;
+    text-align: center;
+    padding: 15vh 10px 8vh 10px;
+    justify-items: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.intro::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(assets/maine-coon-minimized.jpg);
+    opacity: 0.9;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.intro__subheading {
+    max-width: 600px;
+    color: v.$secondary-text;
+}
+
+/*FAQ section styles*/
+
+.question {
+    color: v.$darker-accent;
+    margin: 16px 0 8px;
+    font-weight: 500;
+}
+
+.question:hover {
+    color: v.$bright-accent;
+    cursor: pointer;
+}
+
+.answer {
+    margin: 10px 0 16px 0;
+    padding-left: 10px;
+}
+
+.list {
+    margin-top: 8px;
+}
+
+.chevron::before {
+    border-style: solid;
+    border-width: 0.25em 0.25em 0 0;
+    content: "";
+    display: inline-block;
+    height: 0.45em;
+    left: 0.15em;
+    position: relative;
+    top: 0.15em;
+    transform: rotate(-45deg);
+    vertical-align: top;
+    width: 0.45em;
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.chevron.right:before {
+    left: 0;
+    transform: rotate(45deg);
+}
+
+.chevron.bottom:before {
+    top: 0;
+    transform: rotate(135deg);
+}
+
+.hidden {
+    display: none;
+}
+
+/* media section styles */
+
+.container--dark-bg {
+    display: grid;
+    place-items: center;
+    padding: 30px 10px 20px 10px;
+    background-color: v.$primary-text;
+    opacity: 0.9;
+    color: v.$secondary-text;
+    margin-top: 30px;
+}
+
+.video > .caption {
+    color: v.$secondary-text;
+}
+
+.video {
+    width: 100%;
+    max-width: 600px;
+}
+
+.video-frame {
+    width: 100%;
+    height: 280px;
+}
+
+.social-icons-container {
+    padding: 20px 0;
+}
+
+.social-media-icon {
+    width: 40px;
+}
+
+.social-media-icon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+/*Blockquote section styles*/
+
+.quote-container {
+    max-width: 500px;
+    padding: 20px 15px;
+    align-self: center;
+}
+
+.quote {
+    font-size: 28px;
+    color: v.$darker-accent;
+}
+
+/*Contact info styles*/
+.contact {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 16px 8px;
+    /* background-color: rgba(166, 148, 146, 0.6); */
+    margin-bottom: 30px;
+}
+
+.contact__map-frame {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+}
+
+.contact__heading {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: v.$bright-accent;
+}
+
+@media only screen and (max-width: 500px) {
+    .contact {
+        grid-template-columns: 1fr;
+        justify-items: baseline;
+        text-align: center;
+        justify-items: center;
+    }
+}
+/*Footer styles*/
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    text-align: center;
+    background-color: v.$darker-accent;
+    color: v.$secondary-text;
+    padding: 12px 0 15px 0;
+    font-size: 1em;
+    opacity: 0.9;
+}
