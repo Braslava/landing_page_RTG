@@ -1,0 +1,17 @@
+@use "variables.scss" as v;
+@use "typography.scss"; 
+
+/*Blockquote section styles*/
+
+.quote-container {
+    max-width: 500px;
+    padding: 20px 15px;
+    align-self: center;
+
+    .quote {
+        font-size: 28px;
+        color: v.$darker-accent;
+    }
+}
+
+

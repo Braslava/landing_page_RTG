@@ -338,72 +338,6 @@ template {
   display: none;
 }
 
-:root {
-  scroll-behavior: smooth;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-}
-
-/*Resuable elements*/
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  flex-direction: column;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 10px 15px;
-}
-
-.button-wrapper {
-  margin: 25px 0 15px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-@media only screen and (max-width: 600px) {
-  .button-sm-block {
-    display: flex;
-    margin: 15px 0 10px 0;
-    justify-content: center;
-  }
-}
-.button {
-  background-color: #d99414;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 500;
-  color: #ffffff;
-  border-radius: 8px;
-  padding: 12px 30px;
-  border: none;
-}
-
-.button:hover,
-.button:focus {
-  cursor: pointer;
-  background-color: #a6681c;
-  transition: all 0.5s;
-}
-
-.link {
-  color: #d99414;
-  text-decoration: none;
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-
-/*Typography*/
 .heading--main {
   font-size: 45px;
   text-align: center;
@@ -431,6 +365,10 @@ body {
   position: relative;
   margin-bottom: 20px;
 }
+.intro__subheading {
+  max-width: 600px;
+  color: #ffffff;
+}
 
 .intro::before {
   content: "";
@@ -444,21 +382,14 @@ body {
   z-index: -1;
 }
 
-.intro__subheading {
-  max-width: 600px;
-  color: #ffffff;
-}
-
-/*FAQ section styles*/
 .question {
   color: #a6681c;
   margin: 16px 0 8px;
   font-weight: 500;
+  cursor: pointer;
 }
-
 .question:hover {
   color: #d99414;
-  cursor: pointer;
 }
 
 .answer {
@@ -500,24 +431,12 @@ body {
   display: none;
 }
 
-/* media section styles */
-.container--dark-bg {
-  display: grid;
-  place-items: center;
-  padding: 30px 10px 20px 10px;
-  background-color: #0d0d0d;
-  opacity: 0.9;
-  color: #ffffff;
-  margin-top: 30px;
-}
-
-.video > .caption {
-  color: #ffffff;
-}
-
 .video {
   width: 100%;
   max-width: 600px;
+}
+.video > .caption {
+  color: #ffffff;
 }
 
 .video-frame {
@@ -531,24 +450,11 @@ body {
 
 .social-media-icon {
   width: 40px;
-}
-
-.social-media-icon:hover {
   cursor: pointer;
+}
+.social-media-icon:hover {
   transform: scale(1.1);
   transition: 0.5s;
-}
-
-/*Blockquote section styles*/
-.quote-container {
-  max-width: 500px;
-  padding: 20px 15px;
-  align-self: center;
-}
-
-.quote {
-  font-size: 28px;
-  color: #a6681c;
 }
 
 /*Contact info styles*/
@@ -574,7 +480,7 @@ body {
   color: #d99414;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .contact {
     grid-template-columns: 1fr;
     justify-items: baseline;
@@ -582,7 +488,17 @@ body {
     justify-items: center;
   }
 }
-/*Footer styles*/
+/*Blockquote section styles*/
+.quote-container {
+  max-width: 500px;
+  padding: 20px 15px;
+  align-self: center;
+}
+.quote-container .quote {
+  font-size: 28px;
+  color: #a6681c;
+}
+
 .footer {
   position: sticky;
   bottom: 0;
@@ -592,6 +508,79 @@ body {
   padding: 12px 0 15px 0;
   font-size: 1em;
   opacity: 0.9;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/*Resuable containers*/
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 15px;
+}
+
+.container--dark-bg {
+  display: grid;
+  place-items: center;
+  padding: 30px 10px 20px 10px;
+  background-color: #0d0d0d;
+  opacity: 0.9;
+  color: #ffffff;
+  margin-top: 30px;
+}
+
+.button-wrapper {
+  margin: 25px 0 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/*Buttons and links*/
+@media only screen and (max-width: 600px) {
+  .button-sm-block {
+    display: flex;
+    margin: 15px 0 10px 0;
+    justify-content: center;
+  }
+}
+.button {
+  background-color: #d99414;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 12px 30px;
+  border: none;
+  cursor: pointer;
+}
+.button:hover, .button:focus {
+  background-color: #a6681c;
+  transition: all 0.5s;
+}
+
+.link {
+  color: #d99414;
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,13 @@
+@use "variables.scss" as v;
+@use "typography.scss"; 
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    text-align: center;
+    background-color: v.$darker-accent;
+    color: v.$secondary-text;
+    padding: 12px 0 15px 0;
+    font-size: 1em;
+    opacity: 0.9;
+}

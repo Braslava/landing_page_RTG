@@ -1,0 +1,32 @@
+@use "variables.scss" as v;
+@use "typography.scss";
+
+
+
+.video {
+    width: 100%;
+    max-width: 600px;
+
+    & > .caption {
+        color: v.$secondary-text;
+    }
+}
+
+.video-frame {
+    width: 100%;
+    height: 280px;
+}
+
+.social-icons-container {
+    padding: 20px 0;
+}
+
+.social-media-icon {
+    width: 40px;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+}
