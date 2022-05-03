@@ -22,7 +22,7 @@ const createFaqItem = (itemData) => {
     // create a p html element for the answer and append it to the container
     const answerElement = document.createElement("p");
     answerElement.innerHTML = answer;
-    answerElement.classList.add("paragraph", "answer");
+    answerElement.classList.add("paragraph", "answer", "hidden");
     faqItem.append(answerElement);
 
     // apend the question-answer pair to the faq section
@@ -34,11 +34,22 @@ const toggleOpenAnswer = (answer, question) => {
     answer.classList.toggle("hidden");
 };
 
+const hideOtherAnswers = (currentAnswer) => {
+    console.log(currentAnswer);
+    const faqItems = document.querySelectorAll("#faq .questionContainer");
+    faqItems.forEach((faqItem) => {
+        const answer = faqItem.querySelector(".answer");
+        const question = faqItem.querySelector(".question");
+        if (answer === currentAnswer) return;
+        answer.classList.add("hidden");
+        question.classList.remove("bottom");
+        question.classList.add("right");
+    });
+};
+
 const populateFaq = () => {
     faqData.forEach((faqDataItem) => createFaqItem(faqDataItem));
 };
-
-
 
 // ** Handelers **
 
@@ -50,6 +61,7 @@ const handleQuestionClick = (e) => {
     const answer = questionContainer.querySelector(".answer");
     const question = e.target;
     toggleOpenAnswer(answer, question);
+    hideOtherAnswers(answer);
 };
 
 const handleCloseAll = () => {
