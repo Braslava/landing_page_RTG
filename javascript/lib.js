@@ -40,6 +40,7 @@ const showAnswer = (answer, question) => {
 
 export const toggleOpenAnswer = (answer, question) => {
     question.classList.toggle("bottom");
+    question.classList.toggle("right");
     answer.classList.toggle("hidden");
 };
 
