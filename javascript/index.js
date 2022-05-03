@@ -1,11 +1,11 @@
-import faqData from "/javascript/faqdata.js";
+import faqData from "./faqdata.js";
 import {
     createFaqItem,
     toggleOpenAnswer,
     hideOtherAnswers,
     hideAllAnswers,
     showAllAnswers,
-} from "/javascript/lib.js";
+} from "./lib.js";
 
 // select faq section and populate it with question answer pairs
 const faqContainer = document.querySelector("#faq");
