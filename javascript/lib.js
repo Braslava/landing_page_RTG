@@ -55,7 +55,6 @@ export const hideOtherAnswers = (currentAnswer) => {
 };
 
 export const hideAllAnswers = () => {
-    console.log("hidden");
     const faqItems = getAllFaqItems();
     faqItems.forEach((faqItem) => {
         const answer = faqItem.querySelector(".answer");
@@ -65,7 +64,6 @@ export const hideAllAnswers = () => {
 };
 
 export const showAllAnswers = () => {
-    console.log("show");
     const faqItems = getAllFaqItems();
     faqItems.forEach((faqItem) => {
         const answer = faqItem.querySelector(".answer");
