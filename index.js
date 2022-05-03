@@ -1,57 +1,55 @@
-//import {faqData} from "./faq-data";
+import faqData from "./javascript/faqdata.js";
 
-const faqData = [
-    {
-        question: "Lorem ipsum dolor sit, ametconsectetur adipisicing?",
-        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, quibusdam? Nihil cumque labore ad, delectus nulla, nesciunt voluptate a natus asperiores exercitationem soluta fuga, provident omnis aliquid. Sit accusamus maiores quidem magni id culpa voluptas sint. Odit voluptatem corrupti id ex autnemo officiis officia in.",
-    },
-    {
-        question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
-        answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, quis quas tempore, nihil maxime temporibus debitis nemo facere nostrum id eligendi? Illum eaque atque fugit provident, voluptate sed facere officiis voluptatum assumenda tempora eius neque commodi aperiam dolor ipsa in id minima! Eius dicta nesciunt est cum consequatur nemo fuga?",
-    },
-    {
-        question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
-        answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, quis quas tempore, nihil maxime temporibus debitis nemo facere nostrum id eligendi? Illum eaque atque fugit provident, voluptate sed facere officiis voluptatum assumenda tempora eius neque commodi aperiam dolor ipsa in id minima! Eius dicta nesciunt est cum consequatur nemo fuga?",
-    },
-    {
-        question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
-        answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, quis quas tempore, nihil maxime temporibus debitis nemo facere nostrum id eligendi? Illum eaque atque fugit provident, voluptate sed facere officiis voluptatum assumenda tempora eius neque commodi aperiam dolor ipsa in id minima! Eius dicta nesciunt est cum consequatur nemo fuga?",
-    },
-    {
-        question: "What dishes are your speciality?",
-        answer: `<p>We serve:</p>
-        <ul class="list">
-            <li>Pastas</li>
-            <li>Burgers (including vegan and vegetarian)</li>
-            <li>Salads</li>
-            <li>Rissotos</li>
-            <li>Cakes and desserts</li>
-        </ul>`,
-    },
-    {
-        question: `Where can I see the menu?`,
-        answer: `You can find the menu right here &#8594
-        <span class="button-sm-block"><a href="menu.html#menu" class="button button--link ">Menu</a></span>`,
-    },
-];
-console.log(faqData);
+// ** selecting elements **
+const faqContainer = document.querySelector("#faq");
+
+// ** Main functions **
+
+const createFaqItem = (itemData) => {
+    // destructure the data item
+    const { question, answer } = itemData;
+
+    // create a container for each question-answer
+    const faqItem = document.createElement("div");
+    faqItem.className = "questionContainer";
+
+    // create a p html element for the question and append it to the container
+    const questionElement = document.createElement("p");
+    questionElement.className = "question chevron right";
+    questionElement.innerHTML = question;
+    faqItem.append(questionElement);
+
+    // create a p html element for the answer and append it to the container
+    const answerElement = document.createElement("p");
+    answerElement.innerHTML = answer;
+    answerElement.classList.add("paragraph", "answer");
+    faqItem.append(answerElement);
+
+    // apend the question-answer pair to the faq section
+    faqContainer.append(faqItem);
+};
+
+const toggleOpenAnswer = (answer, question) => {
+    question.classList.toggle("bottom");
+    answer.classList.toggle("hidden");
+};
+
+const populateFaq = () => {
+    faqData.forEach((faqDataItem) => createFaqItem(faqDataItem));
+};
 
 
-// ** selecting elements ** 
-
-const faqContainer = document.querySelector(".faq");
-//const questionContainers = document.querySelectorAll("")
 
 // ** Handelers **
 
 const handleQuestionClick = (e) => {
-    if (!e.target.matches(".question") && !e.target.matches(".chevron")) {
+    if (!e.target.matches(".question")) {
         return;
     }
     const questionContainer = e.target.closest(".questionContainer");
     const answer = questionContainer.querySelector(".answer");
-    const chevron = questionContainer.querySelector(".chevron");
-    toggleOpenAnswer(answer, chevron);
+    const question = e.target;
+    toggleOpenAnswer(answer, question);
 };
 
 const handleCloseAll = () => {
@@ -62,19 +60,7 @@ const handleOepnAll = () => {
     console.log("open all");
 };
 
-// ** Main functions **
-
-
-// const createFaqItem = (itemData)= {
-    
-// }
-
-const toggleOpenAnswer = (answer, chevron) => {
-    chevron.classList.toggle("bottom");
-    answer.classList.toggle("hidden");
-};
-
-
-
 // ** Event listeners **
 faqContainer.addEventListener("click", handleQuestionClick);
+
+populateFaq();
