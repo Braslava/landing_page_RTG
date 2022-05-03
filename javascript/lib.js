@@ -26,6 +26,18 @@ const getAllFaqItems = () => {
     return document.querySelectorAll("#faq .questionContainer");
 };
 
+const hideAnswer = (answer, question) => {
+    answer.classList.add("hidden");
+    question.classList.remove("bottom");
+    question.classList.add("right");
+};
+
+const showAnswer = (answer, question) => {
+    answer.classList.remove("hidden");
+    question.classList.remove("right");
+    question.classList.add("bottom");
+};
+
 export const toggleOpenAnswer = (answer, question) => {
     question.classList.toggle("bottom");
     answer.classList.toggle("hidden");
@@ -37,9 +49,7 @@ export const hideOtherAnswers = (currentAnswer) => {
         const answer = faqItem.querySelector(".answer");
         const question = faqItem.querySelector(".question");
         if (answer === currentAnswer) return;
-        answer.classList.add("hidden");
-        question.classList.remove("bottom");
-        question.classList.add("right");
+        hideAnswer(answer, question);
     });
 };
 
@@ -49,9 +59,7 @@ export const hideAllAnswers = () => {
     faqItems.forEach((faqItem) => {
         const answer = faqItem.querySelector(".answer");
         const question = faqItem.querySelector(".question");
-        answer.classList.add("hidden");
-        question.classList.remove("bottom");
-        question.classList.add("right");
+        hideAnswer(answer, question);
     });
 };
 
@@ -61,8 +69,6 @@ export const showAllAnswers = () => {
     faqItems.forEach((faqItem) => {
         const answer = faqItem.querySelector(".answer");
         const question = faqItem.querySelector(".question");
-        answer.classList.remove("hidden");
-        question.classList.remove("right");
-        question.classList.add("bottom");
+        showAnswer(answer, question);
     });
 };
