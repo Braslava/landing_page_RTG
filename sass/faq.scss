@@ -23,7 +23,19 @@
 
 .serach-container {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    width: auto;
     justify-content: center;
+    align-items: center;
+    border: 1px solid v.$background;
+    background-color: v.$background;
+
+    .button {
+       background-color: v.$darker-accent;
+    }
 
     input {
         margin-left: 5px;

@@ -11,6 +11,10 @@ import {
 const faqContainer = document.querySelector("#faq");
 faqData.forEach((faqDataItem) => createFaqItem(faqDataItem, faqContainer));
 
+// select serach input
+
+const search = document.querySelector(".jsSearchInput");
+
 // ** Handelers **
 
 const handleQuestionClick = (e) => {
@@ -32,6 +36,10 @@ const handleShowAll = () => {
     showAllAnswers();
 };
 
+const filterFaqItems = () => {
+    console.log("filter");
+};
+
 // ** Event listeners **
 faqContainer.addEventListener("click", handleQuestionClick);
 
@@ -42,3 +50,5 @@ document
 document
     .querySelector("#show-all-btn")
     .addEventListener("click", handleShowAll);
+
+search.addEventListener("keyup", filterFaqItems);
