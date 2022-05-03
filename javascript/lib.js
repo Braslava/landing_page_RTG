@@ -1,3 +1,5 @@
+import faqData from "./faqdata.js";
+
 export const createFaqItem = (itemData, faqContainer) => {
     // destructure the data item
     const { question, answer } = itemData;
@@ -71,3 +73,5 @@ export const showAllAnswers = () => {
         showAnswer(answer, question);
     });
 };
+
+

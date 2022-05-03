@@ -9,7 +9,14 @@ import {
 
 // select faq section and populate it with question answer pairs
 const faqContainer = document.querySelector("#faq");
-faqData.forEach((faqDataItem) => createFaqItem(faqDataItem, faqContainer));
+
+
+const initializeFaq = (faqContainer) => {
+    faqContainer.innerHTML = "";
+    faqData.forEach((faqDataItem) => createFaqItem(faqDataItem, faqContainer));
+};
+
+initializeFaq(faqContainer);
 
 // select serach input
 
@@ -36,8 +43,25 @@ const handleShowAll = () => {
     showAllAnswers();
 };
 
+const clearSeach = () => {
+    search.value = "";
+    initializeFaq(faqContainer);
+};
+
 const filterFaqItems = () => {
-    console.log("filter");
+    const searchTerm = search.value.toLowerCase();
+    console.log(searchTerm);
+
+    const filteredData = faqData.filter(
+        (item) =>
+            item.answer.toLowerCase().includes(searchTerm) ||
+            item.question.toLowerCase().includes(searchTerm)
+    );
+    console.log(filteredData);
+    faqContainer.innerHTML = "";
+    filteredData.forEach((faqDataItem) =>
+        createFaqItem(faqDataItem, faqContainer)
+    );
 };
 
 // ** Event listeners **
@@ -52,3 +76,5 @@ document
     .addEventListener("click", handleShowAll);
 
 search.addEventListener("keyup", filterFaqItems);
+
+document.querySelector("#clear-search").addEventListener("click", clearSeach);
