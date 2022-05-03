@@ -1,0 +1,68 @@
+export const createFaqItem = (itemData, faqContainer) => {
+    // destructure the data item
+    const { question, answer } = itemData;
+
+    // create a container for each question-answer
+    const faqItem = document.createElement("div");
+    faqItem.className = "questionContainer";
+
+    // create a p html element for the question and append it to the container
+    const questionElement = document.createElement("p");
+    questionElement.className = "question chevron right";
+    questionElement.innerHTML = question;
+    faqItem.append(questionElement);
+
+    // create a p html element for the answer and append it to the container
+    const answerElement = document.createElement("p");
+    answerElement.innerHTML = answer;
+    answerElement.classList.add("paragraph", "answer", "hidden");
+    faqItem.append(answerElement);
+
+    // apend the question-answer pair to the faq section
+    faqContainer.append(faqItem);
+};
+
+const getAllFaqItems = () => {
+    return document.querySelectorAll("#faq .questionContainer");
+};
+
+export const toggleOpenAnswer = (answer, question) => {
+    question.classList.toggle("bottom");
+    answer.classList.toggle("hidden");
+};
+
+export const hideOtherAnswers = (currentAnswer) => {
+    const faqItems = getAllFaqItems();
+    faqItems.forEach((faqItem) => {
+        const answer = faqItem.querySelector(".answer");
+        const question = faqItem.querySelector(".question");
+        if (answer === currentAnswer) return;
+        answer.classList.add("hidden");
+        question.classList.remove("bottom");
+        question.classList.add("right");
+    });
+};
+
+export const hideAllAnswers = () => {
+    console.log("hidden");
+    const faqItems = getAllFaqItems();
+    faqItems.forEach((faqItem) => {
+        const answer = faqItem.querySelector(".answer");
+        const question = faqItem.querySelector(".question");
+        answer.classList.add("hidden");
+        question.classList.remove("bottom");
+        question.classList.add("right");
+    });
+};
+
+export const showAllAnswers = () => {
+    console.log("show");
+    const faqItems = getAllFaqItems();
+    faqItems.forEach((faqItem) => {
+        const answer = faqItem.querySelector(".answer");
+        const question = faqItem.querySelector(".question");
+        answer.classList.remove("hidden");
+        question.classList.remove("right");
+        question.classList.add("bottom");
+    });
+};
