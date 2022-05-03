@@ -401,6 +401,14 @@ template {
   margin-top: 8px;
 }
 
+.serach-container {
+  display: flex;
+  justify-content: center;
+}
+.serach-container input {
+  margin-left: 5px;
+}
+
 .chevron::before {
   border-style: solid;
   border-width: 0.25em 0.25em 0 0;
@@ -547,6 +555,7 @@ body {
 .button-wrapper {
   margin: 25px 0 15px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
 }
@@ -561,16 +570,31 @@ body {
 }
 .button {
   background-color: #d99414;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 500;
   color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
   border-radius: 8px;
-  padding: 12px 30px;
   border: none;
   cursor: pointer;
+  text-transform: uppercase;
+  padding: 12px 30px;
 }
 .button:hover, .button:focus {
+  background-color: #a6681c;
+  transition: all 0.5s;
+}
+.button--small {
+  background-color: #d99414;
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+}
+.button--small:hover, .button--small:focus {
   background-color: #a6681c;
   transition: all 0.5s;
 }

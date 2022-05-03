@@ -6,7 +6,7 @@ export const createFaqItem = (itemData, faqContainer) => {
     const faqItem = document.createElement("div");
     faqItem.className = "questionContainer";
 
-    // create a p html element for the question and append it to the container
+    // create an html p element for the question and append it to the container
     const questionElement = document.createElement("p");
     questionElement.className = "question chevron right";
     questionElement.innerHTML = question;

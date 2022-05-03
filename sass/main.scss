@@ -49,6 +49,7 @@ body {
 .button-wrapper {
     margin: 25px 0 15px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
 }
@@ -63,14 +64,12 @@ body {
     }
 }
 
-.button {
+@mixin button-styles {
     background-color: v.$bright-accent;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 500;
     color: v.$secondary-text;
+    font-weight: 500;
+    text-decoration: none;
     border-radius: 8px;
-    padding: 12px 30px;
     border: none;
     cursor: pointer;
 
@@ -79,6 +78,20 @@ body {
         background-color: v.$darker-accent;
         transition: all 0.5s;
     }
+}
+
+.button {
+    @include button-styles();
+    text-transform: uppercase;
+    padding: 12px 30px;
+
+    &--small {
+        @include button-styles();
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    
 }
 
 .link {
