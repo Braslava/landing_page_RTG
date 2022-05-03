@@ -72,11 +72,11 @@ body {
     border-radius: 8px;
     border: none;
     cursor: pointer;
+    transition: all 0.5s;
 
     &:hover,
     &:focus {
         background-color: v.$darker-accent;
-        transition: all 0.5s;
     }
 }
 
@@ -88,10 +88,8 @@ body {
     &--small {
         @include button-styles();
         padding: 8px 20px;
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
-
-    
 }
 
 .link {

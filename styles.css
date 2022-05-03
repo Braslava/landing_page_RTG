@@ -407,6 +407,12 @@ template {
 }
 .serach-container input {
   margin-left: 5px;
+  border: 1px solid #a69492;
+  border-radius: 8px;
+  padding: 4px;
+}
+.serach-container input:focus {
+  outline: 2px solid #a6681c;
 }
 
 .chevron::before {
@@ -576,12 +582,12 @@ body {
   border-radius: 8px;
   border: none;
   cursor: pointer;
+  transition: all 0.5s;
   text-transform: uppercase;
   padding: 12px 30px;
 }
 .button:hover, .button:focus {
   background-color: #a6681c;
-  transition: all 0.5s;
 }
 .button--small {
   background-color: #d99414;
@@ -591,12 +597,12 @@ body {
   border-radius: 8px;
   border: none;
   cursor: pointer;
+  transition: all 0.5s;
   padding: 8px 20px;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 .button--small:hover, .button--small:focus {
   background-color: #a6681c;
-  transition: all 0.5s;
 }
 
 .link {
