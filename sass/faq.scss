@@ -1,6 +1,10 @@
 @use "variables.scss" as v;
 @use "typography.scss";
 
+.questionContainer {
+    margin: 2rem 0.5rem;
+}
+
 .question {
     color: v.$darker-accent;
     margin: 16px 0 8px;
@@ -55,12 +59,12 @@
     height: 0.45em;
     left: 0.15em;
     position: relative;
-    top: 0.15em;
+    top: -0.1em;
     transform: rotate(-45deg);
-    vertical-align: top;
+    // vertical-align: baseline;
     width: 0.45em;
     margin-right: 8px;
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 .chevron.right:before {
@@ -69,7 +73,9 @@
 }
 
 .chevron.bottom:before {
-    top: 0;
+    // top: 0;
+    top: -0.15em;
+
     transform: rotate(135deg);
 }
 

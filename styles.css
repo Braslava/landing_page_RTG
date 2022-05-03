@@ -388,6 +388,10 @@ template {
   z-index: -1;
 }
 
+.questionContainer {
+  margin: 2rem 0.5rem;
+}
+
 .question {
   color: #a6681c;
   margin: 16px 0 8px;
@@ -440,12 +444,11 @@ template {
   height: 0.45em;
   left: 0.15em;
   position: relative;
-  top: 0.15em;
+  top: -0.1em;
   transform: rotate(-45deg);
-  vertical-align: top;
   width: 0.45em;
   margin-right: 8px;
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 
 .chevron.right:before {
@@ -454,7 +457,7 @@ template {
 }
 
 .chevron.bottom:before {
-  top: 0;
+  top: -0.15em;
   transform: rotate(135deg);
 }
 
