@@ -44,7 +44,7 @@ const handleShowAll = () => {
 
 const clearSeach = () => {
     search.value = "";
-    initializeFaq(faqContainer);
+    initializeFaq(faqContainer, faqData);
 };
 
 const filterFaqItems = () => {
@@ -62,7 +62,7 @@ const filterFaqItems = () => {
     );
 };
 
-// ** Event listeners and bootstraping**
+// ** Event listeners and bootstrapping**
 faqContainer.addEventListener("click", handleQuestionClick);
 hideAllButton.addEventListener("click", handleCloseAll);
 showAllButton.addEventListener("click", handleShowAll);
@@ -71,4 +71,4 @@ search.addEventListener("keyup", filterFaqItems);
 
 clearSearchButton.addEventListener("click", clearSeach);
 
-initializeFaq(faqContainer);
+initializeFaq(faqContainer, faqData);

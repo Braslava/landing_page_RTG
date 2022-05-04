@@ -1,4 +1,9 @@
-import faqData from "./faqdata.js";
+import {
+    getAllFaqItems,
+    getAnswerAndQuestionElements,
+    showAnswer,
+    hideAnswer,
+} from "./helpers.js";
 
 export const createFaqItem = (itemData, faqContainer) => {
     // destructure the data item
@@ -24,32 +29,9 @@ export const createFaqItem = (itemData, faqContainer) => {
     faqContainer.append(faqItem);
 };
 
-export const initializeFaq = (faqContainer) => {
+export const initializeFaq = (faqContainer, faqData) => {
     faqContainer.innerHTML = "";
     faqData.forEach((faqDataItem) => createFaqItem(faqDataItem, faqContainer));
-};
-
-// helper functions
-const getAllFaqItems = () => {
-    return document.querySelectorAll("#faq .questionContainer");
-};
-
-const getAnswerAndQuestionElements = (faqItem) => {
-    const answer = faqItem.querySelector(".answer");
-    const question = faqItem.querySelector(".question");
-    return { answer, question };
-};
-
-const hideAnswer = (answer, question) => {
-    answer.classList.add("hidden");
-    question.classList.remove("bottom");
-    question.classList.add("right");
-};
-
-const showAnswer = (answer, question) => {
-    answer.classList.remove("hidden");
-    question.classList.remove("right");
-    question.classList.add("bottom");
 };
 
 export const toggleOpenAnswer = (answer, question) => {
@@ -62,8 +44,6 @@ export const hideOtherAnswers = (currentAnswer) => {
     const faqItems = getAllFaqItems();
     faqItems.forEach((faqItem) => {
         const { answer, question } = getAnswerAndQuestionElements(faqItem);
-        // const answer = faqItem.querySelector(".answer");
-        // const question = faqItem.querySelector(".question");
         if (answer === currentAnswer) return;
         hideAnswer(answer, question);
     });
@@ -73,8 +53,6 @@ export const hideAllAnswers = () => {
     const faqItems = getAllFaqItems();
     faqItems.forEach((faqItem) => {
         const { answer, question } = getAnswerAndQuestionElements(faqItem);
-        // const answer = faqItem.querySelector(".answer");
-        // const question = faqItem.querySelector(".question");
         hideAnswer(answer, question);
     });
 };
@@ -83,8 +61,6 @@ export const showAllAnswers = () => {
     const faqItems = getAllFaqItems();
     faqItems.forEach((faqItem) => {
         const { answer, question } = getAnswerAndQuestionElements(faqItem);
-        // const answer = faqItem.querySelector(".answer");
-        // const question = faqItem.querySelector(".question");
         showAnswer(answer, question);
     });
 };
