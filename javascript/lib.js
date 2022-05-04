@@ -24,15 +24,20 @@ export const createFaqItem = (itemData, faqContainer) => {
     faqContainer.append(faqItem);
 };
 
-
 export const initializeFaq = (faqContainer) => {
     faqContainer.innerHTML = "";
     faqData.forEach((faqDataItem) => createFaqItem(faqDataItem, faqContainer));
 };
 
-
+// helper functions
 const getAllFaqItems = () => {
     return document.querySelectorAll("#faq .questionContainer");
+};
+
+const getAnswerAndQuestionElements = (faqItem) => {
+    const answer = faqItem.querySelector(".answer");
+    const question = faqItem.querySelector(".question");
+    return { answer, question };
 };
 
 const hideAnswer = (answer, question) => {
@@ -56,8 +61,9 @@ export const toggleOpenAnswer = (answer, question) => {
 export const hideOtherAnswers = (currentAnswer) => {
     const faqItems = getAllFaqItems();
     faqItems.forEach((faqItem) => {
-        const answer = faqItem.querySelector(".answer");
-        const question = faqItem.querySelector(".question");
+        const { answer, question } = getAnswerAndQuestionElements(faqItem);
+        // const answer = faqItem.querySelector(".answer");
+        // const question = faqItem.querySelector(".question");
         if (answer === currentAnswer) return;
         hideAnswer(answer, question);
     });
@@ -66,8 +72,9 @@ export const hideOtherAnswers = (currentAnswer) => {
 export const hideAllAnswers = () => {
     const faqItems = getAllFaqItems();
     faqItems.forEach((faqItem) => {
-        const answer = faqItem.querySelector(".answer");
-        const question = faqItem.querySelector(".question");
+        const { answer, question } = getAnswerAndQuestionElements(faqItem);
+        // const answer = faqItem.querySelector(".answer");
+        // const question = faqItem.querySelector(".question");
         hideAnswer(answer, question);
     });
 };
@@ -75,10 +82,9 @@ export const hideAllAnswers = () => {
 export const showAllAnswers = () => {
     const faqItems = getAllFaqItems();
     faqItems.forEach((faqItem) => {
-        const answer = faqItem.querySelector(".answer");
-        const question = faqItem.querySelector(".question");
+        const { answer, question } = getAnswerAndQuestionElements(faqItem);
+        // const answer = faqItem.querySelector(".answer");
+        // const question = faqItem.querySelector(".question");
         showAnswer(answer, question);
     });
 };
-
-
