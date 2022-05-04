@@ -5,19 +5,17 @@ import {
     hideOtherAnswers,
     hideAllAnswers,
     showAllAnswers,
-    initializeFaq
+    initializeFaq,
 } from "./lib.js";
 
-// select elements 
+// select elements
 const faqContainer = document.querySelector("#faq");
 const search = document.querySelector(".jsSearchInput");
+const hideAllButton = document.querySelector("#hide-all-btn");
+const showAllButton = document.querySelector("#show-all-btn");
+const clearSearchButton = document.querySelector("#clear-search");
 
-
-
-
-
-
-
+let allAnswersOpen = false;
 
 // ** Handelers **
 
@@ -29,15 +27,19 @@ const handleQuestionClick = (e) => {
     const answer = questionContainer.querySelector(".answer");
     const question = e.target;
     toggleOpenAnswer(answer, question);
-    hideOtherAnswers(answer);
+    if (!allAnswersOpen) {
+        hideOtherAnswers(answer);
+    }
 };
 
 const handleCloseAll = () => {
     hideAllAnswers();
+    allAnswersOpen = false;
 };
 
 const handleShowAll = () => {
     showAllAnswers();
+    allAnswersOpen = true;
 };
 
 const clearSeach = () => {
@@ -47,15 +49,14 @@ const clearSeach = () => {
 
 const filterFaqItems = () => {
     const searchTerm = search.value.toLowerCase();
-    console.log(searchTerm);
-
     const filteredData = faqData.filter(
         (item) =>
             item.answer.toLowerCase().includes(searchTerm) ||
             item.question.toLowerCase().includes(searchTerm)
     );
-    console.log(filteredData);
+    // clear the contents of the container
     faqContainer.innerHTML = "";
+    // set the contents to the filtered items
     filteredData.forEach((faqDataItem) =>
         createFaqItem(faqDataItem, faqContainer)
     );
@@ -63,17 +64,11 @@ const filterFaqItems = () => {
 
 // ** Event listeners and bootstraping**
 faqContainer.addEventListener("click", handleQuestionClick);
-
-document
-    .querySelector("#hide-all-btn")
-    .addEventListener("click", handleCloseAll);
-
-document
-    .querySelector("#show-all-btn")
-    .addEventListener("click", handleShowAll);
+hideAllButton.addEventListener("click", handleCloseAll);
+showAllButton.addEventListener("click", handleShowAll);
 
 search.addEventListener("keyup", filterFaqItems);
 
-document.querySelector("#clear-search").addEventListener("click", clearSeach);
+clearSearchButton.addEventListener("click", clearSeach);
 
 initializeFaq(faqContainer);
