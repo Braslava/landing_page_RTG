@@ -5,22 +5,19 @@ import {
     hideOtherAnswers,
     hideAllAnswers,
     showAllAnswers,
+    initializeFaq
 } from "./lib.js";
 
-// select faq section and populate it with question answer pairs
+// select elements 
 const faqContainer = document.querySelector("#faq");
-
-
-const initializeFaq = (faqContainer) => {
-    faqContainer.innerHTML = "";
-    faqData.forEach((faqDataItem) => createFaqItem(faqDataItem, faqContainer));
-};
-
-initializeFaq(faqContainer);
-
-// select serach input
-
 const search = document.querySelector(".jsSearchInput");
+
+
+
+
+
+
+
 
 // ** Handelers **
 
@@ -64,7 +61,7 @@ const filterFaqItems = () => {
     );
 };
 
-// ** Event listeners **
+// ** Event listeners and bootstraping**
 faqContainer.addEventListener("click", handleQuestionClick);
 
 document
@@ -78,3 +75,5 @@ document
 search.addEventListener("keyup", filterFaqItems);
 
 document.querySelector("#clear-search").addEventListener("click", clearSeach);
+
+initializeFaq(faqContainer);

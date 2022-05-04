@@ -38,7 +38,7 @@
     background-color: v.$background;
 
     .button {
-       background-color: v.$darker-accent;
+        background-color: v.$darker-accent;
     }
 
     input {
@@ -46,9 +46,15 @@
         border: 1px solid v.$background;
         border-radius: 8px;
         padding: 4px;
+        -webkit-appearance: none;
+
         &:focus {
             outline: 2px solid v.$darker-accent;
         }
+    }
+
+    input::-webkit-search-cancel-button {
+        -webkit-appearance: none;
     }
 }
 .chevron::before {

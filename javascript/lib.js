@@ -24,6 +24,13 @@ export const createFaqItem = (itemData, faqContainer) => {
     faqContainer.append(faqItem);
 };
 
+
+export const initializeFaq = (faqContainer) => {
+    faqContainer.innerHTML = "";
+    faqData.forEach((faqDataItem) => createFaqItem(faqDataItem, faqContainer));
+};
+
+
 const getAllFaqItems = () => {
     return document.querySelectorAll("#faq .questionContainer");
 };

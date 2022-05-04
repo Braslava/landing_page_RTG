@@ -431,9 +431,13 @@ template {
   border: 1px solid #aca3a1;
   border-radius: 8px;
   padding: 4px;
+  -webkit-appearance: none;
 }
 .serach-container input:focus {
   outline: 2px solid #a6681c;
+}
+.serach-container input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
 }
 
 .chevron::before {
