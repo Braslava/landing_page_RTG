@@ -1,14 +1,15 @@
 @use "variables.scss" as v;
 
-.heading--main {
-    font-size: 3rem;
-    text-align: center;
-}
-
-.heading--section {
-    font-size: 2.5rem;
-    text-align: center;
-    color: v.$darker-accent;
+.heading {
+    &--main {
+        font-size: 3rem;
+        text-align: center;
+    }
+    &--section {
+        font-size: 2.5rem;
+        text-align: center;
+        color: v.$darker-accent;
+    }
 }
 
 .subheading {

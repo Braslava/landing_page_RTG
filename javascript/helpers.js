@@ -1,5 +1,5 @@
 export const getAllFaqItems = () => {
-    return document.querySelectorAll("#faq .questionContainer");
+    return document.querySelectorAll("#faq .question-container");
 };
 
 export const getAnswerAndQuestionElements = (faqItem) => {

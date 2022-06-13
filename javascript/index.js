@@ -10,7 +10,7 @@ import {
 
 // select elements
 const faqContainer = document.querySelector("#faq");
-const search = document.querySelector(".jsSearchInput");
+const search = document.querySelector(".js-search-input");
 const hideAllButton = document.querySelector("#hide-all-btn");
 const showAllButton = document.querySelector("#show-all-btn");
 const clearSearchButton = document.querySelector("#clear-search");
@@ -23,7 +23,7 @@ const handleQuestionClick = (e) => {
     if (!e.target.matches(".question")) {
         return;
     }
-    const questionContainer = e.target.closest(".questionContainer");
+    const questionContainer = e.target.closest(".question-container");
     const answer = questionContainer.querySelector(".answer");
     const question = e.target;
     toggleOpenAnswer(answer, question);

@@ -10,8 +10,8 @@ export const createFaqItem = (itemData, faqContainer) => {
     const { question, answer } = itemData;
 
     // create a container for each question-answer
-    const faqItem = document.createElement("div");
-    faqItem.className = "questionContainer";
+    const faqItem = document.createElement("li");
+    faqItem.className = "question-container";
 
     // create an html p element for the question and append it to the container
     const questionElement = document.createElement("button");

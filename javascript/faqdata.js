@@ -13,7 +13,7 @@ const faqData = [
     },
     {
         question: "Do you accommodate food allergies or dietary restrictions?",
-        answer: "Our culinary team is able to accommodate certain food allergies and dietary restrictions with 72 hours notice but is not able to do so with less time. Accommodations for dietary restrictions and allergies are not guaranteed. In order to ensure that our team can accommodate your or your guest’s request, please answer our pre-visit questions at the time of booking, or contact us at info@blackcat-restaurant.com at least 72 hours in advance.",
+        answer: "Our culinary team is able to accommodate certain food allergies and dietary restrictions with 72 hours notice but is not able to do so with less time. Accommodations for dietary restrictions and allergies are not guaranteed. In order to ensure that our team can accommodate your or your guest’s request, please answer our pre-visit questions at the time of booking, or contact us at blackcat@blackcatresto.lv at least 72 hours in advance.",
     },
     {
         question: "What dishes are your speciality?",

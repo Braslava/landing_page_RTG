@@ -342,7 +342,6 @@ template {
   font-size: 3rem;
   text-align: center;
 }
-
 .heading--section {
   font-size: 2.5rem;
   text-align: center;
@@ -375,13 +374,12 @@ template {
   max-width: 600px;
   color: #ffffff;
 }
-
 .intro::before {
   content: "";
   position: absolute;
   inset: 0;
   background-image: url(assets/maine-coon-minimized.jpg);
-  opacity: 0.9;
+  opacity: 0.85;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -394,7 +392,7 @@ template {
   padding: 0;
 }
 
-.questionContainer {
+.question-container {
   margin: 2rem 0.5rem;
 }
 
@@ -422,7 +420,7 @@ template {
   margin-top: 8px;
 }
 
-.serach-container {
+.search-container {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
@@ -431,24 +429,25 @@ template {
   width: auto;
   justify-content: center;
   align-items: center;
-  border: 1px solid #aca3a1;
-  background-color: #aca3a1;
 }
-.serach-container .button {
-  background-color: #a6681c;
-}
-.serach-container input {
+.search-container .serach-container__input {
   margin-left: 5px;
-  border: 1px solid #aca3a1;
-  border-radius: 8px;
+  border: none;
+  border-bottom: 1px solid #aca3a1;
   padding: 4px;
   -webkit-appearance: none;
 }
-.serach-container input:focus {
-  outline: 2px solid #a6681c;
+.search-container .serach-container__input:focus, .search-container .serach-container__input:hover {
+  border-bottom: 2px solid #d99414;
+  margin-bottom: -1px;
+  outline: none;
 }
-.serach-container input::-webkit-search-cancel-button {
+.search-container input::-webkit-search-cancel-button {
   -webkit-appearance: none;
+}
+.search-container .button-wrapper {
+  margin-top: 0;
+  background-color: red;
 }
 
 .chevron::before {
@@ -544,7 +543,7 @@ template {
   align-self: center;
 }
 .quote-container .quote {
-  font-size: 28px;
+  font-size: 1.8rem;
   color: #a6681c;
 }
 
@@ -640,19 +639,23 @@ body {
 .button--small:hover, .button--small:focus {
   background-color: #a6681c;
 }
-
 .button--outline {
-  color: #d99414;
-  background-color: #ffffff;
+  background-color: #d99414;
+  color: #ffffff;
   font-weight: 500;
   text-decoration: none;
   border-radius: 8px;
   border: none;
   cursor: pointer;
   transition: all 0.5s;
+  color: #d99414;
+  background-color: #ffffff;
   padding: 4px 20px;
   font-size: 1rem;
   outline: 2px solid #d99414;
+}
+.button--outline:hover, .button--outline:focus {
+  background-color: #a6681c;
 }
 .button--outline:hover, .button--outline:focus {
   background-color: #d99414;
