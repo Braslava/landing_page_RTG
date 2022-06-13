@@ -432,7 +432,7 @@ template {
   width: auto;
   justify-content: center;
   align-items: center;
-  background-color: #aca3a1;
+  background-color: rgba(230, 224, 223, 0.8);
 }
 .search-container .serach-container__input {
   margin-left: 5px;
