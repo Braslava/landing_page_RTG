@@ -374,6 +374,9 @@ template {
   max-width: 600px;
   color: #ffffff;
 }
+.intro .button-wrapper {
+  margin: 2rem 0 1rem;
+}
 .intro::before {
   content: "";
   position: absolute;
@@ -388,7 +391,7 @@ template {
 
 .faq-container {
   list-style: none;
-  margin: 0;
+  margin: 1rem 0 0 0;
   padding: 0;
 }
 
@@ -424,30 +427,26 @@ template {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
-  margin: 0 auto;
+  margin: 0 auto 1rem;
   padding: 1rem 2rem;
   width: auto;
   justify-content: center;
   align-items: center;
+  background-color: #aca3a1;
 }
 .search-container .serach-container__input {
   margin-left: 5px;
   border: none;
-  border-bottom: 1px solid #aca3a1;
   padding: 4px;
   -webkit-appearance: none;
 }
 .search-container .serach-container__input:focus, .search-container .serach-container__input:hover {
-  border-bottom: 2px solid #d99414;
-  margin-bottom: -1px;
+  border-bottom: 3px solid #d99414;
+  margin-bottom: -3px;
   outline: none;
 }
 .search-container input::-webkit-search-cancel-button {
   -webkit-appearance: none;
-}
-.search-container .button-wrapper {
-  margin-top: 0;
-  background-color: red;
 }
 
 .chevron::before {
@@ -505,7 +504,6 @@ template {
   transition: 0.5s;
 }
 
-/*Contact info styles*/
 .contact {
   display: grid;
   gap: 15px;
@@ -515,19 +513,6 @@ template {
   /* background-color: rgba(166, 148, 146, 0.6); */
   margin-bottom: 30px;
 }
-
-.contact__map-frame {
-  width: 100%;
-  height: 100%;
-  max-width: 400px;
-}
-
-.contact__heading {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #d99414;
-}
-
 @media only screen and (max-width: 600px) {
   .contact {
     grid-template-columns: 1fr;
@@ -536,6 +521,17 @@ template {
     justify-items: center;
   }
 }
+.contact__map-frame {
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+}
+.contact__heading {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #d99414;
+}
+
 /*Blockquote section styles*/
 .quote-container {
   max-width: 500px;
@@ -594,7 +590,6 @@ body {
 }
 
 .button-wrapper {
-  margin: 25px 0 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

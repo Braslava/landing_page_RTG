@@ -1,12 +1,11 @@
 @use "reset.scss";
+@use "typography.scss";
 @use "header.scss";
 @use "faq.scss";
 @use "media.scss";
 @use "contact.scss";
 @use "blockquote.scss";
-@use "typography.scss";
 @use "footer.scss";
-
 @use "variables.scss" as v;
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap");
@@ -48,7 +47,6 @@ body {
 }
 
 .button-wrapper {
-    margin: 25px 0 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

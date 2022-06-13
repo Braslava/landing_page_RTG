@@ -1,5 +1,5 @@
 @use "variables.scss" as v;
-@use "typography.scss";
+
 
 /* hero section styles */
 
@@ -15,6 +15,10 @@
     &__subheading {
         max-width: 600px;
         color: v.$secondary-text;
+    }
+
+    .button-wrapper {
+        margin: 2rem 0 1rem;
     }
 
     &::before {

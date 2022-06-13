@@ -1,9 +1,8 @@
 @use "variables.scss" as v;
-@use "typography.scss";
 
 .faq-container {
     list-style: none;
-    margin: 0;
+    margin: 1rem 0 0 0;
     padding: 0;
 }
 
@@ -40,36 +39,31 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
-    margin: 0 auto;
+    margin: 0 auto 1rem;
     padding: 1rem 2rem;
     width: auto;
     justify-content: center;
     align-items: center;
-   
+    background-color: v.$background;   
 
     .serach-container__input {
         margin-left: 5px;
         border: none;
-        border-bottom: 1px solid v.$background;
+      //  border-bottom: 1px solid v.$background;
         padding: 4px;
         -webkit-appearance: none;
 
         &:focus, &:hover {
-            border-bottom: 2px solid v.$bright-accent;
-            margin-bottom: -1px;
+            border-bottom: 3px solid v.$bright-accent;
+            margin-bottom: -3px;
             outline: none;
         }
     }
 
+    // removes the default clear button from search input
     input::-webkit-search-cancel-button {
         -webkit-appearance: none;
     }
-    
-    .button-wrapper {
-        margin-top: 0;
-        background-color: red;
-    }
-    
 }
 
 
