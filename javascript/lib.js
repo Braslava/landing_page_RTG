@@ -14,7 +14,7 @@ export const createFaqItem = (itemData, faqContainer) => {
     faqItem.className = "questionContainer";
 
     // create an html p element for the question and append it to the container
-    const questionElement = document.createElement("p");
+    const questionElement = document.createElement("button");
     questionElement.className = "question chevron right";
     questionElement.innerHTML = question;
     faqItem.append(questionElement);
