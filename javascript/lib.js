@@ -5,7 +5,7 @@ import {
     hideAnswer,
 } from "./helpers.js";
 
-export const createFaqItem = (itemData, faqContainer) => {
+export const createFaqItem = (itemData, faqContainer, index) => {
     // destructure the data item
     const { question, answer } = itemData;
 
@@ -18,6 +18,7 @@ export const createFaqItem = (itemData, faqContainer) => {
     questionElement.className = "question chevron right";
     questionElement.innerHTML = question;
     questionElement.setAttribute("aria-expanded", false);
+    questionElement.setAttribute("aria-controls", `item ${index}`);
     faqItem.append(questionElement);
 
     // create a p html element for the answer and append it to the container
@@ -25,6 +26,7 @@ export const createFaqItem = (itemData, faqContainer) => {
     answerElement.innerHTML = answer;
     answerElement.classList.add("paragraph", "answer", "hidden");
     answerElement.setAttribute("aria-hidden", true);
+    answerElement.setAttribute("id", `item ${index}`);
     faqItem.append(answerElement);
 
     // apend the question-answer pair to the faq section
@@ -33,7 +35,9 @@ export const createFaqItem = (itemData, faqContainer) => {
 
 export const initializeFaq = (faqContainer, faqData) => {
     faqContainer.innerHTML = "";
-    faqData.forEach((faqDataItem) => createFaqItem(faqDataItem, faqContainer));
+    faqData.forEach((faqDataItem, index) =>
+        createFaqItem(faqDataItem, faqContainer, index)
+    );
 };
 
 export const toggleOpenAnswer = (answer, question) => {
@@ -42,9 +46,6 @@ export const toggleOpenAnswer = (answer, question) => {
     answer.classList.toggle("hidden");
     const isNowExpanded = question.getAttribute("aria-expanded");
     const isNowHidden = answer.getAttribute("aria-hidden");
-
-    console.log(isNowExpanded, isNowHidden);
-
     isNowExpanded === "true"
         ? question.setAttribute("aria-expanded", false)
         : question.setAttribute("aria-expanded", true);
