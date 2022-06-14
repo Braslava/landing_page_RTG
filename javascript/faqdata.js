@@ -29,7 +29,7 @@ const faqData = [
     {
         question: `Where can I see the menu?`,
         answer: `You can find the menu right here &#8594
-        <span class="button-sm-block"><a href="menu.html#menu" class="button button--link ">Menu</a></span>`,
+        <span class="button-sm-block"><a href="menu.html#menu" class="button--small button--link ">Menu</a></span>`,
     },
 ];
 
