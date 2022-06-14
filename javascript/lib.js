@@ -17,12 +17,14 @@ export const createFaqItem = (itemData, faqContainer) => {
     const questionElement = document.createElement("button");
     questionElement.className = "question chevron right";
     questionElement.innerHTML = question;
+    questionElement.setAttribute("aria-expanded", false);
     faqItem.append(questionElement);
 
     // create a p html element for the answer and append it to the container
     const answerElement = document.createElement("p");
     answerElement.innerHTML = answer;
     answerElement.classList.add("paragraph", "answer", "hidden");
+    answerElement.setAttribute("aria-hidden", true);
     faqItem.append(answerElement);
 
     // apend the question-answer pair to the faq section
@@ -38,6 +40,18 @@ export const toggleOpenAnswer = (answer, question) => {
     question.classList.toggle("bottom");
     question.classList.toggle("right");
     answer.classList.toggle("hidden");
+    const isNowExpanded = question.getAttribute("aria-expanded");
+    const isNowHidden = answer.getAttribute("aria-hidden");
+
+    console.log(isNowExpanded, isNowHidden);
+
+    isNowExpanded === "true"
+        ? question.setAttribute("aria-expanded", false)
+        : question.setAttribute("aria-expanded", true);
+
+    isNowHidden === "true"
+        ? answer.setAttribute("aria-hidden", false)
+        : answer.setAttribute("aria-hidden", true);
 };
 
 export const hideOtherAnswers = (currentAnswer) => {
