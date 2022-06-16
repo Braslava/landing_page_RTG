@@ -542,6 +542,23 @@ template {
   color: #a6681c;
 }
 
+.nav {
+  background-color: rgba(230, 224, 223, 0.8);
+  color: #ffffff;
+  padding: 1rem 0.5rem;
+}
+.nav__list {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.nav__link {
+  list-style-type: none;
+}
+
 .footer {
   position: sticky;
   bottom: 0;
@@ -662,6 +679,9 @@ body {
 }
 .link:hover {
   text-decoration: underline;
+}
+.link--dark {
+  color: #0d0d0d;
 }
 
 /*# sourceMappingURL=styles.css.map */

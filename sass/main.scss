@@ -5,6 +5,7 @@
 @use "media.scss";
 @use "contact.scss";
 @use "blockquote.scss";
+@use "nav.scss";
 @use "footer.scss";
 @use "variables.scss" as v;
 
@@ -112,5 +113,9 @@ body {
 
     &:hover {
         text-decoration: underline;
+    }
+
+    &--dark {
+        color: v.$primary-text;
     }
 }

@@ -11,79 +11,89 @@
 </head>
 
 <body>
-    <header class="intro">
-        <div class="flex-container">
-            <h1 class="heading--main">Black Cat Restaurant</h1>
-            <p class="intro__info">Cat Street 123, Riga, LATVIA</p>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__link"><a href="#hero" class="link link--dark">Home</a></li>
+            <li class="nav__link"><a href="#faq-section" class="link link--dark">FAQ</a></li>
+            <li class="nav__link"><a href="#contact" class="link link--dark">Contact</a></li>
+            <li class="nav__link"><a href="#quote" class="link link--dark">Inspiration</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="intro" id="hero">
+            <div class="flex-container">
+                <h1 class="heading--main">Black Cat Restaurant</h1>
+                <p class="intro__info">Cat Street 123, Riga, LATVIA</p>
 
-            <p class="pagraph subheading intro__subheading ">
-                We love black cats and serve amazing food for people! Try out our <a href="menu.html#menu"
-                    class="link">summer menu</a> or <a href="index.html#contact" class="link">contact
-                    us</a> to book a table!
-            </p>
+                <p class="pagraph subheading intro__subheading ">
+                    We love black cats and serve amazing food for people! Try out our <a href="menu.html#menu"
+                        class="link">summer menu</a> or <a href="index.html#contact" class="link">contact
+                        us</a> to book a table!
+                </p>
+                <div class="button-wrapper">
+                    <a href="#faq-section" class="button button--link">Learn more</a>
+                </div>
+            </div>
+        </section>
+        <section class="faq flex-container" id="faq-section">
+            <h2 class="heading--section">Frequently asked questions</h2>
+            <div class="search-container">
+                <label for="search">
+                    Search in FAQ
+                </label>
+                <input class="js-search-input serach-container__input" type="search" id="search" autocomplete="off"
+                    spellcheck="false" placeholder="Enter a search term">
+
+                <button class="button--outline" id="clear-search">Clear</button>
+            </div>
             <div class="button-wrapper">
-                <a href="#faq-section" class="button button--link">Learn more</a>
+                <button class="button--small" aria-controls="faq" id="show-all-btn">Open all</button>
+                <button class="button--small" aria-controls="faq" id="hide-all-btn">Close all</button>
             </div>
-        </div>
-    </header>
-    <section class="faq flex-container" id="faq-section">
-        <h2 class="heading--section">Frequently asked questions</h2>
-        <div class="search-container">
-            <label for="search">
-                Search in FAQ
-            </label>
-            <input class="js-search-input serach-container__input" type="search" id="search" autocomplete="off" spellcheck="false"
-                placeholder="Enter a search term">
+            <ul class="faq-container" id="faq"></ul>
+        </section>
+        <section id="contact" class="container--dark-bg">
 
-            <button class="button--outline" id="clear-search">Clear</button>
-        </div>
-        <div class="button-wrapper">
-            <button class="button--small" aria-controls="faq" id="show-all-btn">Open all</button>
-            <button class="button--small" aria-controls="faq" id="hide-all-btn">Close all</button>
-        </div>
-        <ul class="faq-container" id="faq"></ul>
-    </section>
-    <section id="contact" class="container--dark-bg">
+            <div class="contact">
+                <div class="contact__details">
+                    <h2 class="contact__heading">Contact information: </h2>
+                    <p class="paragraph">
+                        Address: Cat Street 123, Riga, LATVIA
+                    </p>
+                    <p class="paragraph">
+                        Email: blackcat@blackcatresto.lv
+                    </p>
+                    <p class="paragraph">
+                        Phone: +371 12345678
+                    </p>
+                </div>
 
-        <div class="contact">
-            <div class="contact__details">
-                <h2 class="contact__heading">Contact information: </h2>
-                <p class="paragraph">
-                    Address: Cat Street 123, Riga, LATVIA
-                </p>
-                <p class="paragraph">
-                    Email: blackcat@blackcatresto.lv
-                </p>
-                <p class="paragraph">
-                    Phone: +371 12345678
-                </p>
+                <iframe class="contact__map-frame"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2169.249956149014!2d24.027139215289655!3d57.064373197542196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eec6a4ee53c901%3A0xae9086350af609e0!2sMangalsala%20breakwater!5e0!3m2!1sen!2slv!4v1647418173553!5m2!1sen!2slv"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <iframe class="contact__map-frame"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2169.249956149014!2d24.027139215289655!3d57.064373197542196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eec6a4ee53c901%3A0xae9086350af609e0!2sMangalsala%20breakwater!5e0!3m2!1sen!2slv!4v1647418173553!5m2!1sen!2slv"
-                style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+            <div class="social-icons-container">
+                <a href="https://github.com/Braslava" target=”_blank” class="social-media-link"><img
+                        class="social-media-icon" src="assets/social-media/icons8-github.svg" alt="author's Github"></a>
+                <a href="https://www.linkedin.com/in/braslava/" target=”_blank” class="social-media-link"><img
+                        class="social-media-icon" src="assets/social-media/icons8-linkedin-64.svg"
+                        alt="author's LinkedIn"></a>
+                <a href="https://www.instagram.com/cats_of_instagram/" target=”_blank” class="social-media-link"><img
+                        class="social-media-icon" src="assets/social-media/icons8-instagram-64.svg"
+                        alt="cats of Instagram"></a>
+            </div>
 
-        <div class="social-icons-container">
-            <a href="https://github.com/Braslava" target=”_blank” class="social-media-link"><img
-                    class="social-media-icon" src="assets/social-media/icons8-github.svg" alt="author's Github"></a>
-            <a href="https://www.linkedin.com/in/braslava/" target=”_blank” class="social-media-link"><img
-                    class="social-media-icon" src="assets/social-media/icons8-linkedin-64.svg"
-                    alt="author's LinkedIn"></a>
-            <a href="https://www.instagram.com/cats_of_instagram/" target=”_blank” class="social-media-link"><img
-                    class="social-media-icon" src="assets/social-media/icons8-instagram-64.svg"
-                    alt="cats of Instagram"></a>
-        </div>
-
-    </section>
-    <section class="flex-container">
-        <figure class="quote-container">
-            <blockquote class="quote">“A happy arrangement: many people prefer cats to other people, and many cats
-                prefer people to other cats.”</blockquote>
-            <figcaption class="caption"> - Mason Cooley</figcaption>
-        </figure>
-    </section>
+        </section>
+        <section class="flex-container" id="quote">
+            <figure class="quote-container">
+                <blockquote class="quote">“A happy arrangement: many people prefer cats to other people, and many cats
+                    prefer people to other cats.”</blockquote>
+                <figcaption class="caption"> - Mason Cooley</figcaption>
+            </figure>
+        </section>
+    </main>
     <footer class="footer">
         <div class="flex-container">
             Made by Māra Braslava
