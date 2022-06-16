@@ -4,7 +4,7 @@ This project is a restaurant landing page created during RigaTechGirls mentorshi
 
 ## To run this project 
 
-This project uses Sass. 
+This project uses SCSS. 
 
 ## To run this project 
 
