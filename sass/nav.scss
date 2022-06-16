@@ -1,8 +1,11 @@
 @use "variables.scss" as v;
 
 .nav {
-   
-    background-color: v.$background;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background-color: v.$background-solid;
     color: v.$secondary-text;
     padding: 1rem 0.5rem;
 

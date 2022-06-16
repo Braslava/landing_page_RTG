@@ -543,7 +543,11 @@ template {
 }
 
 .nav {
-  background-color: rgba(230, 224, 223, 0.8);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background-color: #e6e0df;
   color: #ffffff;
   padding: 1rem 0.5rem;
 }
