@@ -27,6 +27,7 @@ export const createFaqItem = (itemData, faqContainer, index) => {
     answerElement.classList.add("paragraph", "answer", "hidden");
     answerElement.setAttribute("aria-hidden", true);
     answerElement.setAttribute("id", `item ${index}`);
+    answerElement.setAttribute("aria-role", "region");
     faqItem.append(answerElement);
 
     // apend the question-answer pair to the faq section
