@@ -1,35 +1,99 @@
 @use "variables.scss" as v;
 
+// .header {
+// }
 
-/* hero section styles */
-
-.intro {
-    display: grid;
+.nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    background-color: v.$background;
     color: v.$secondary-text;
-    text-align: center;
-    padding: 15vh 10px 8vh 10px;
-    justify-items: center;
-    position: relative;
-    margin-bottom: 20px;
+    padding: 0.5rem 0;
+    margin: 0;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
 
-    &__subheading {
-        max-width: 600px;
-        color: v.$secondary-text;
+    &__list {
+        margin: 0 auto;
+        max-width: 1000px;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: flex-end;
     }
 
-    .button-wrapper {
-        margin: 2rem 0 1rem;
+    &__link {
+        list-style-type: none;
+        a {
+            text-align: center;
+        }
+        
+    }
+}
+
+.nav__toggle {
+    position: absolute;
+    display: none;
+}
+
+/* Creates a collapsable menu for smaller screens*/
+@media only screen and (max-width: v.$layour-breakpoint-sm) {
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        inset: 0 0 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 350ms;
+        padding: 2rem;
+        background-color: v.$background;
+        backdrop-filter: blur(15px);
+
+        &__list {
+            flex-direction: column;
+            justify-content: center;
+            // background-color: rgba(248, 240, 240, 0.8);
+            // backdrop-filter: blur(15px);
+        }
+        &[data-visible="true"] {
+            transform: translateX(0%);
+        }
+
+        &__link {
+            display: flex;
+            margin-bottom: 1rem;
+
+            a {
+                text-align: center;
+            }
+        }
     }
 
-    &::before {
-        content: "";
+    .nav__toggle {
         position: absolute;
-        inset: 0;
-        background-image: url(assets/maine-coon-minimized.jpg);
-        opacity: 0.85;
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
-        z-index: -1;
+        display: block;
+        position: absolute;
+        background: url("../assets/menu_icon.svg");
+        background-repeat: no-repeat;
+        z-index: 199;
+        width: 2rem;
+        aspect-ratio: 1;
+        border: none;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+    }
+
+    .nav__toggle[aria-expanded="true"] {
+        background: url("../assets/close_icon.svg");
+        background-repeat: no-repeat;
     }
 }

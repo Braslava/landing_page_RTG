@@ -439,7 +439,7 @@ template {
   width: auto;
   justify-content: center;
   align-items: center;
-  background-color: rgba(230, 224, 223, 0.8);
+  background-color: rgba(230, 224, 223, 0.7);
 }
 .search-container__input {
   margin-left: 5px;
@@ -561,33 +561,95 @@ template {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 100;
-  background-color: #e6e0df;
+  z-index: 10;
+  background-color: rgba(230, 224, 223, 0.7);
   color: #ffffff;
-  padding: 1rem 0.5rem;
+  padding: 0.5rem 0;
   margin: 0;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
 }
 .nav__list {
-  max-width: 1000px;
   margin: 0 auto;
-  width: 100%;
-  padding: 0;
+  max-width: 1000px;
+  padding: 0 1rem;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   gap: 1rem;
+  justify-content: flex-end;
 }
 .nav__link {
   list-style-type: none;
 }
+.nav__link a {
+  text-align: center;
+}
 
+.nav__toggle {
+  position: absolute;
+  display: none;
+}
+
+/* Creates a collapsable menu for smaller screens*/
+@media only screen and (max-width: 600px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    inset: 0 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 350ms;
+    padding: 2rem;
+    background-color: rgba(230, 224, 223, 0.7);
+    backdrop-filter: blur(15px);
+  }
+  .nav__list {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .nav[data-visible=true] {
+    transform: translateX(0%);
+  }
+  .nav__link {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  .nav__link a {
+    text-align: center;
+  }
+
+  .nav__toggle {
+    position: absolute;
+    display: block;
+    position: absolute;
+    background: url("../assets/menu_icon.svg");
+    background-repeat: no-repeat;
+    z-index: 199;
+    width: 2rem;
+    aspect-ratio: 1;
+    border: none;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
+  .nav__toggle[aria-expanded=true] {
+    background: url("../assets/close_icon.svg");
+    background-repeat: no-repeat;
+  }
+}
 .footer {
   position: sticky;
   bottom: 0;
   text-align: center;
   background-color: #a6681c;
   color: #ffffff;
-  padding: 12px 0 15px 0;
+  padding: 5px 0 8px 0;
   font-size: 1em;
   opacity: 0.9;
 }

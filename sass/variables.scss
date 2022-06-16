@@ -1,16 +1,16 @@
-// colors 
+// colors
 
 $primary-text: #0d0d0d;
 $secondary-text: #ffffff;
 $middle-text: #585859;
 $bright-accent: #d99414;
 $darker-accent: #a6681c;
-$background: #e6e0dfcc;
+//$background: #e6e0dfcc; background in hex does not work with backdrop filter
+$background: rgba(230, 224, 223, 0.7);
 $background-solid: #e6e0df;
 
-// layout breakpoints 
+// layout breakpoints
 
 $layour-breakpoint-sm: 600px;
 
-// spacings 
-
+// spacings
