@@ -8,5 +8,6 @@ This project is a restaurant landing page created during RigaTechGirls mentorshi
 
 - Run `npm install` in that folder on your local machine. Once the dependencies are done installing, execute `npm run sass` to compile styles and open the `index.html` file in the browser or using live server extention in VSCode, for example.
 
+## Sample page 
 
-
+You can check out the [demo page] (https://braslava.github.io/landing_page_RTG/).
