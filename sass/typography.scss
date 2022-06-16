@@ -1,11 +1,15 @@
 @use "variables.scss" as v;
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap");
 
 .heading {
     &--main {
         font-size: 3.5rem;
         text-align: center;
-        font-family: 'PT Serif', serif;
+        font-family: "PT Serif", serif;
+
+        @media only screen and (max-width: v.$layour-breakpoint-sm) {
+            font-size: 2.5rem;
+        }
     }
     &--section {
         font-size: 2.5rem;

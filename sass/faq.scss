@@ -46,7 +46,10 @@
     align-items: center;
     background-color: v.$background;   
 
-    .serach-container__input {
+    
+
+
+    &__input {
         margin-left: 5px;
         border: none;
         padding: 4px;
@@ -62,6 +65,14 @@
     // removes the default clear button from search input
     input::-webkit-search-cancel-button {
         -webkit-appearance: none;
+    }
+
+    @media only screen and (max-width: v.$layour-breakpoint-sm) {
+        width: 100%;
+        
+        &__input {
+            margin-left: 0;
+        }
     }
 }
 
