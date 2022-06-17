@@ -12,7 +12,7 @@
 
 <body>
     <header class="header">
-        <nav class="nav">
+        <nav class="nav" data-visible="false" id="navigation">
             <ul class="nav__list">
                 <li class="nav__link"><a href="index.html" class="link link--dark">Home</a></li>
                 <li class="nav__link"><a href="index.html#faq-section" class="link link--dark">FAQ</a></li>
@@ -21,7 +21,7 @@
                 <li class="nav__link"><a href="menu.html" class="link link--dark">Menu</a></li>
             </ul>
         </nav>
-        <button class="nav__toggle"></button>
+        <button class="nav__toggle" aria-controls="navigation" aria-expanded="false"></button>
     </header>
     <main>
         <section class="intro" id="hero">
