@@ -8,12 +8,15 @@ import {
     initializeFaq,
 } from "./lib.js";
 
+//import { showNavBar, hideNavBar } from "./nav.js";
+
 // select elements
 const faqContainer = document.querySelector("#faq");
 const search = document.querySelector(".js-search-input");
 const hideAllButton = document.querySelector("#hide-all-btn");
 const showAllButton = document.querySelector("#show-all-btn");
 const clearSearchButton = document.querySelector("#clear-search");
+
 
 let allAnswersOpen = false;
 
@@ -70,5 +73,6 @@ showAllButton.addEventListener("click", handleShowAll);
 search.addEventListener("keyup", filterFaqItems);
 
 clearSearchButton.addEventListener("click", clearSeach);
+
 
 initializeFaq(faqContainer, faqData);
