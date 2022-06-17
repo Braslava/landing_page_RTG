@@ -580,6 +580,7 @@ template {
 }
 .nav__link {
   list-style-type: none;
+  font-weight: 500;
 }
 .nav__link a {
   text-align: center;
@@ -611,22 +612,20 @@ template {
   .nav__list {
     flex-direction: column;
     justify-content: center;
+    text-align: center;
   }
   .nav[data-visible=true] {
     transform: translateX(0%);
   }
   .nav__link {
     display: flex;
+    justify-content: center;
     margin-bottom: 1rem;
-  }
-  .nav__link a {
-    text-align: center;
   }
 
   .nav__toggle {
-    position: absolute;
     display: block;
-    position: absolute;
+    position: fixed;
     background: url("../assets/menu_icon.svg");
     background-repeat: no-repeat;
     z-index: 199;

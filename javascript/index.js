@@ -8,7 +8,7 @@ import {
     initializeFaq,
 } from "./lib.js";
 
-import { showNavBar, hideNavBar } from "./nav.js";
+//import { showNavBar, hideNavBar } from "./nav.js";
 
 // select elements
 const faqContainer = document.querySelector("#faq");
@@ -16,8 +16,7 @@ const search = document.querySelector(".js-search-input");
 const hideAllButton = document.querySelector("#hide-all-btn");
 const showAllButton = document.querySelector("#show-all-btn");
 const clearSearchButton = document.querySelector("#clear-search");
-const nav = document.querySelector(".nav");
-const navToggleButton = document.querySelector(".nav__toggle");
+
 
 let allAnswersOpen = false;
 
@@ -75,13 +74,5 @@ search.addEventListener("keyup", filterFaqItems);
 
 clearSearchButton.addEventListener("click", clearSeach);
 
-navToggleButton.addEventListener("click", () => {
-    const navVisibility = nav.getAttribute("data-visible");
-    if (navVisibility === "false") {
-        showNavBar(nav, navToggleButton);
-    } else {
-        hideNavBar(nav, navToggleButton);
-    }
-});
 
 initializeFaq(faqContainer, faqData);
