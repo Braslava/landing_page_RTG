@@ -1,0 +1,35 @@
+@use "variables.scss" as v;
+
+
+/* hero section styles */
+
+.intro {
+    display: grid;
+    color: v.$secondary-text;
+    text-align: center;
+    padding: 15vh 10px 8vh 10px;
+    justify-items: center;
+    position: relative;
+    margin-bottom: 20px;
+
+    &__subheading {
+        max-width: 600px;
+        color: v.$secondary-text;
+    }
+
+    .button-wrapper {
+        margin: 2rem 0 1rem;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url(assets/maine-coon-minimized.jpg);
+        opacity: 0.85;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        z-index: -1;
+    }
+}
