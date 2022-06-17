@@ -76,7 +76,7 @@
     .nav__toggle {
         display: block;
         position: fixed;
-        background: url("../assets/menu_icon.svg");
+        background: url("assets/menu_icon.svg");
         background-repeat: no-repeat;
         z-index: 199;
         width: 2rem;
@@ -88,7 +88,7 @@
     }
 
     .nav__toggle[aria-expanded="true"] {
-        background: url("../assets/close_icon.svg");
+        background: url("assets/close_icon.svg");
         background-repeat: no-repeat;
     }
 }
