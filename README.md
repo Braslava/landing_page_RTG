@@ -14,4 +14,4 @@ This project uses SCSS.
 
 ## Sample page 
 
-You can check out the [demo page] (https://braslava.github.io/landing_page_RTG/).
+You can check out the [demo page](https://braslava.github.io/landing_page_RTG/).
